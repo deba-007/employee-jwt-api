@@ -6,7 +6,7 @@
 
 	<groupId>edb9e133-4fdc-4d59-a620-ef5448e8a9f0</groupId>
 	<artifactId>employee-jwt-api</artifactId>
-	<version>1.8.16</version>
+	<version>1.8.17</version>
 	<packaging>mule-application</packaging>
 	<name>employee-jwt-api</name>
 
@@ -16,15 +16,6 @@
 		<app.runtime>4.4.0</app.runtime>
 		<app.name>employee-jwt-api</app.name>
 		<mule.maven.plugin.version>4.3.1</mule.maven.plugin.version>
-		<anypoint.env>Sandbox</anypoint.env>
-		<muleKey>MuleSoft@@@#2025</muleKey>
-		<env>dev</env>
-		<cloudhub2.region>Cloudhub-US-East-2</cloudhub2.region>
-		<cloudhub2.replicas>1</cloudhub2.replicas>
-		<cloudhub2.vCores>0.2</cloudhub2.vCores>
-		<apiID>20072160</apiID>
-		<CLIENT_ID>8f418e5797534be5b492ed86261d6bb3</CLIENT_ID>
-		<CLIENT_SECRET>5a9496C61261446bA58357BDEF5bB5E2</CLIENT_SECRET>
 	</properties>
 
 	<build>
@@ -47,7 +38,8 @@
 						<environment>${anypoint.env}</environment>
 						<replicas>${cloudhub2.replicas}</replicas>
 						<vCores>${cloudhub2.vCores}</vCores>
-						<server>anypoint-exchange-v3</server>
+						<username>${user}</username>
+                        <password>${pass}</password>
 						<muleVersion>${app.runtime}</muleVersion>
 						<applicationName>${app.name}</applicationName>
 						<deploymentSettings>
