@@ -6,7 +6,7 @@
 
 	<groupId>edb9e133-4fdc-4d59-a620-ef5448e8a9f0</groupId>
 	<artifactId>employee-jwt-api</artifactId>
-	<version>1.8.20</version>
+	<version>1.8.21</version>
 	<packaging>mule-application</packaging>
 	<name>employee-jwt-api</name>
 
@@ -41,7 +41,6 @@
 						<server>${server}</server>
 						<muleVersion>${app.runtime}</muleVersion>
 						<applicationName>${app.name}</applicationName>
-						<businessGroupId>${project.groupId}</businessGroupId>
 						<deploymentSettings>
 							<http>
 								<inbound>
