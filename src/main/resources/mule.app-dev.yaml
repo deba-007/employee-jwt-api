@@ -1,0 +1,7 @@
+HTTP:
+  host: "localhost"
+  port: "8081"
+  timeOut: "30000"
+  IdleTimeOut: "40000"
+  
+apiID: "20068836"
