@@ -6,7 +6,7 @@
 
 	<groupId>edb9e133-4fdc-4d59-a620-ef5448e8a9f0</groupId>
 	<artifactId>employee-jwt-api</artifactId>
-	<version>1.8.18</version>
+	<version>1.8.19</version>
 	<packaging>mule-application</packaging>
 	<name>employee-jwt-api</name>
 
@@ -38,8 +38,7 @@
 						<environment>${anypoint.env}</environment>
 						<replicas>${cloudhub2.replicas}</replicas>
 						<vCores>${cloudhub2.vCores}</vCores>
-						<username>${user}</username>
-                        <password>${pass}</password>
+						<server>${server}</server>
 						<muleVersion>${app.runtime}</muleVersion>
 						<applicationName>${app.name}</applicationName>
 						<businessGroupId>${project.groupId}</businessGroupId>
@@ -54,7 +53,6 @@
 						<properties>
 							<env>${env}</env>
 							<apiID>${apiID}</apiID>
-
 						</properties>
 						<secureProperties>
 							<muleKey>${muleKey}</muleKey>
