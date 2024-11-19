@@ -1,6 +1,5 @@
 HTTP:
-  host: "localhost"
-  port: "8082"
+  port: "8081"
   timeOut: "30000"
   IdleTimeOut: "40000"
 
