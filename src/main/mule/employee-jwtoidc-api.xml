@@ -3,7 +3,7 @@
 http://www.mulesoft.org/schema/mule/secure-properties http://www.mulesoft.org/schema/mule/secure-properties/current/mule-secure-properties.xsd
 http://www.mulesoft.org/schema/mule/api-gateway http://www.mulesoft.org/schema/mule/api-gateway/current/mule-api-gateway.xsd">
     <http:listener-config name="employee-jwtoidc-api-httpListenerConfig">
-        <http:listener-connection host="0.0.0.0" port="${secure::HTTP.port}" readTimeout="${secure::HTTP.timeOut}" connectionIdleTimeout="${secure::HTTP.IdleTimeOut}"/>
+        <http:listener-connection host="${secure::HTTP.host}" port="${secure::HTTP.port}" readTimeout="${secure::HTTP.timeOut}" connectionIdleTimeout="${secure::HTTP.IdleTimeOut}"/>
     </http:listener-config>
     <apikit:config name="employee-jwtoidc-api-config" api="resource::edb9e133-4fdc-4d59-a620-ef5448e8a9f0:employee-jwtoidc-api:1.0.0:raml:zip:employee-jwtoidc-api.raml" outboundHeadersMapName="outboundHeaders" httpStatusVarName="httpStatus" >
 		<apikit:flow-mappings >
