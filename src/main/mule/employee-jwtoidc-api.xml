@@ -135,26 +135,7 @@ output application/json
     <flow name="get:\employees:employee-jwtoidc-api-config">
         <ee:transform doc:name="Transform Message">
             <ee:message>
-                <ee:set-payload><![CDATA[%dw 2.0
-output application/json
----
-[
-  {
-    EMPLOYEEID: 123,
-    NAME: "John Doe",
-    SALARY: 75000
-  }, 
-  {
-    EMPLOYEEID: 456,
-    NAME: "Jane Smith",
-    SALARY: 82000
-  }, 
-  {
-    EMPLOYEEID: 789,
-    NAME: "Alice Johnson",
-    SALARY: 67000
-  }
-] as Array {encoding: "UTF-8", mediaType: "application/json"}]]></ee:set-payload>
+				<ee:set-payload resource="dwl/employees-get.dwl" />
             </ee:message>
         </ee:transform>
 		<logger level="INFO" doc:name="Logger" doc:id="ff018db6-2e1c-411d-9886-6fdf5fc40a31" message="employee response: #[payload]" />
